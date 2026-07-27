@@ -15,7 +15,9 @@ Note: "Entomology" (correct) is the spelling used everywhere on the site; the lo
 
 ## Deployment — IMPORTANT
 
-`main` auto-deploys to GitHub Pages at https://glasscrane.github.io/mathe-entomology-consulting/ (legacy Pages build from `main` branch root). **Every push to `main` is a production deploy. Commit locally, but never `git push` unless the user explicitly asks.**
+`main` auto-deploys to GitHub Pages at https://glasscrane.github.io/mathe-entomology-consulting/ (legacy Pages build from `main` branch root), served on the custom domain https://matheentomology.com (apex A records + `www` CNAME at GoDaddy; `CNAME` file in the repo root — do not delete it or the custom domain unsets itself). **Every push to `main` is a production deploy. Commit locally, but never `git push` unless the user explicitly asks.**
+
+**Cache busting — IMPORTANT.** Pages serves assets with `Cache-Control: max-age=600`, so a plain browser refresh reuses a stale `style.css`/`main.js` for up to 10 minutes and the change looks like it didn't deploy. `index.html` links both with a `?v=N` query string. **Whenever you change `css/style.css` or `js/main.js`, bump `N` on that file's link in `index.html` in the same commit.**
 
 ## Developing / verifying changes
 
