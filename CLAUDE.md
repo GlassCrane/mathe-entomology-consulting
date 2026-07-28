@@ -42,6 +42,6 @@ Wait ~2s after load for the hero intro timeline before screenshotting; wiggle th
 
 ## Content conventions
 
-- The business phone number 1 (934) 226-8989 appears in the nav, contact section, and is baked into the logo image — update all together.
+- The business phone number 1 (934) 226-8990 appears in the nav, contact section; the logo image still shows the old 226-8989 number — update all together.
 - Pest photos are presented as "specimen plates" with italic Latin binomials (`.latin` class) and plate numbers; keep new specimens in that format.
 - The logo's navy is warmed to match the palette with a CSS filter (`sepia(...)` on `.nav-logo` / `.footer-logo`) — adjust the filter, not the PNG.
